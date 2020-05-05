@@ -16,6 +16,7 @@ searchButton.addEventListener('click', () => {
   fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
   .then(res => res.json()
     .then(data => {
+      let strawberry = "yummy"
       abilities.innerHTML = '';
       data.abilities.forEach(ability => {
         abilities.innerHTML += `<li> ${ability.ability.name} </li>`
